@@ -1,0 +1,1 @@
+document.getElementByID("id_x").inerHTML = "salut";
