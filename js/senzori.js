@@ -1,1 +1,1 @@
-document.getElementById("id_x").inerHTML = "salut";
+document.getElementById("id_x").innerHTML = "salut";
