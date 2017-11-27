@@ -1,4 +1,4 @@
-document.getElementById("id_business_version").innerHTML = "Business version = 2017.11.27.0"
+document.getElementById("id_business_version").innerHTML = "Business version = 2017.11.27.1"
 window.addEventListener("deviceorientation", on_device_orientation );
 
 function deseneaza_cerc(unghi1, unghi2)
