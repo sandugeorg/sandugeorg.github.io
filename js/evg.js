@@ -4,8 +4,8 @@ window.addEventListener("deviceorientation", on_device_orientation );
 function deseneaza_cerc(unghi1, unghi2)
 {
 	var cerc = document.getElementById("id_cyrcle");
-	cerc.setAttribute(cx, 200 + unghi1 * 200 / 90);
-	cerc.setAttribute(cy, 200 + unghi1 * 200 / 90);
+	cerc.setAttribute("cx", 200 + unghi1 * 200 / 90);
+	cerc.setAttribute("cy", 200 + unghi1 * 200 / 90);
 	
 	
 	
