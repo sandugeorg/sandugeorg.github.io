@@ -3,6 +3,7 @@ window.addEventListener("deviceorientation", on_device_orientation );
 
 //------------------------------
 
+
 function deseneaza_cerc(unghi1, unghi2)
 {
 	
