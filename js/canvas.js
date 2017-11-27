@@ -5,7 +5,7 @@ var canvas = document.getElementById("id_canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.arc(100, 100, 20, 0, Math.PI / 2);
+ctx.arc(100, 100, 20, 0, 2 * Math.PI);
 
 
 
