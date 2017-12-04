@@ -15,7 +15,7 @@ for(var i=0; i<touches.length; i++)
 	context.arc(touches.item(i).pageX,touches.item(i).pageY,20,0,2*Math.PI);
 	context.lineWidth=5;
 	context.stroke(); 
-	context.strokeStyle = lista][i];
+	context.strokeStyle = lista[i];
 }
 	
 }
