@@ -10,10 +10,11 @@ function on_position_success(e)
 	document.getElementById("id_alt").innerHTML = "Altitude =" + e.coords.altitude;
 var map_str = "https://maps.googleapis.com/maps/api/staticmap?" + "center="+ e.coords.latitude+ ","
 + e.coords.longitude+
-"&zoom=18" +
+"&zoom=16" +
  "&size=400x300" +
  "&key=AIzaSyACZOC1Gk4ILbhnGdr49HGgODXXxDDz0z0" + "&markers=color:blue|label:A|"+e.coords.latitude+ ","
-+ e.coords.longitude ;
++ e.coords.longitude + "&path=color:red|"+ +e.coords.latitude+ ","
++ e.coords.longitude+"|Sala Unirii Alba Iulia" ;
 	document.getElementById("id_img").src = map_str;
 }
 //-----------------------------
@@ -24,6 +25,8 @@ function on_position_failure(e)
 	
 	
 }
+
+
 //------------
 //AIzaSyACZOC1Gk4ILbhnGdr49HGgODXXxDDz0z0
 //&key=AIzaSyDUU2mhTvUfY8EYOmp55I3D5OzfsBTy6vQ
