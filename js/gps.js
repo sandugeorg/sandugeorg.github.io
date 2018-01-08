@@ -10,9 +10,10 @@ function on_position_success(e)
 	document.getElementById("id_alt").innerHTML = "Altitude =" + e.coords.altitude;
 var map_str = "https://maps.googleapis.com/maps/api/staticmap?" + "center="+ e.coords.latitude+ ","
 + e.coords.longitude+
-"&zoom=15" +
+"&zoom=18" +
  "&size=400x300" +
- "&key=AIzaSyACZOC1Gk4ILbhnGdr49HGgODXXxDDz0z0";
+ "&key=AIzaSyACZOC1Gk4ILbhnGdr49HGgODXXxDDz0z0" + "&markers=color:blue|label:Apor"+e.coords.latitude+ ","
++ e.coords.longitude ;
 	document.getElementById("id_img").src = map_str;
 }
 //-----------------------------
