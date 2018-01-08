@@ -12,7 +12,7 @@ var map_str = "https://maps.googleapis.com/maps/api/staticmap?" + "center="+ e.c
 + e.coords.longitude+
 "&zoom=18" +
  "&size=400x300" +
- "&key=AIzaSyACZOC1Gk4ILbhnGdr49HGgODXXxDDz0z0" + "&markers=color:blue|Apor|"+e.coords.latitude+ ","
+ "&key=AIzaSyACZOC1Gk4ILbhnGdr49HGgODXXxDDz0z0" + "&markers=color:blue|label:APOR|"+e.coords.latitude+ ","
 + e.coords.longitude ;
 	document.getElementById("id_img").src = map_str;
 }
