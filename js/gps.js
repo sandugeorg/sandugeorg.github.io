@@ -1,5 +1,5 @@
 
-document.getElementById("id_business_version").innerHTML = "Business version = 2017.12.14.0";
+document.getElementById("id_business_version").innerHTML = "Business version = 2018.1.8.2";
 navigator.geolocation.getCurrentPosition(on_position_failure, on_position_success);
 
 function on_position_success(e)
@@ -21,4 +21,3 @@ function on_position_failure(e)
 	
 }
 //------------
-AIzaSyDUU2mhTvUfY8EYOmp55I3D5OzfsBTy6vQ
