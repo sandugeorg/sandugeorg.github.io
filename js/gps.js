@@ -7,6 +7,9 @@ function on_position_success(e)
 	document.getElementById("id_lat").innerHTML = "Latitude =" + e.coords.latitude;
 	document.getElementById("id_long").innerHTML = "Longitude" + e.coords.longitude;
 	document.getElementById("id_acc").innerHTML = "Accuracy" +  e.coords.accuracy + m;
+var map_str = "https://maps.googleapis.com/maps/api/staticmap?center="+ "e.coords.latitude+",
+"+ e.coords.longitude+","&zoom = 15" + "&size = 400x300" + "& key = AIzaSyDUU2mhTvUfY8EYOmp55I3D5OzfsBTy6vQ ";
+	document.getElementById("id_img").src = map_str
 }
 //-----------------------------
 function on_position_failure(e)
@@ -16,3 +19,5 @@ function on_position_failure(e)
 	
 	
 }
+//------------
+AIzaSyDUU2mhTvUfY8EYOmp55I3D5OzfsBTy6vQ
