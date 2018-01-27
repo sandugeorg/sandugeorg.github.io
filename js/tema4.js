@@ -9,6 +9,13 @@ video.addEventListener("mousedown",on_touch_video);
 
 
 //------------------------
+function record()
+{
+	if(on_cam.start())
+	{
+		
+	}
+}
 function on_cam(stream)
 {
 	video.srcObject=stream;
