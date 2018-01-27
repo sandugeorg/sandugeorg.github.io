@@ -9,7 +9,7 @@ video.addEventListener("mousedown",on_touch_video);
 
 
 //------------------------
-function record()
+function Record()
 {
 	if(on_cam.start())
 	{
