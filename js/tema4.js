@@ -2,7 +2,7 @@ var d = new Date();
 document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
 //_______________________________________________###____________________________________________
 var constraints={audio: true,video: { facingMode: { exact: "environment" } }};
-navigator.mediaDevices.getUserMedia(constraints).then(on_cam).catch(on_error);
+navigator.mediaDevices.getUserMedia(constraints).then(Record).catch(on_error);
 var video = document.getElementById("id_video");
 video.addEventListener("touchstart",on_touch_video);
 video.addEventListener("mousedown",on_touch_video);
