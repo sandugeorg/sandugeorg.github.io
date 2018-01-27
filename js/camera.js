@@ -9,6 +9,7 @@ var image = document.getElementById("id_img");
 //----------------------------
 function on_touch_start(e)
 {
+	e.preventDefault();
 	video.srcObject=stream;
 }
 //function on_cam(stream)
@@ -16,6 +17,13 @@ function on_touch_start(e)
 	//video.srcObject=stream;
 //}
 //----------------------------
+
+function on_touch_end(e)
+{
+	e.preventDefault();
+	clearInterval(timer_id);
+}
+//------------------------------
 function on_error(e)
 {
 	alert("ERROR!: cannot connect to camera!");
