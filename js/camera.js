@@ -7,26 +7,13 @@ var video = document.getElementById("id_video");
 var image = document.getElementById("id_img");
 image.addEventListener("touchstart",on_touch_start);
 image.addEventListener("touchend",on_touch_end);
-
-
-//----------------------------
 function on_touch_start(e)
 {
 	e.preventDefault();
-	video.srcObject=stream;
-}
-//function on_cam(stream)
-//{
-	//video.srcObject=stream;
-//}
+id_video = video.srcObject=stream;
+
 //----------------------------
 
-function on_touch_end(e)
-{
-	e.preventDefault();
-	clearInterval(timer_id);
-}
-//------------------------------
 function on_error(e)
 {
 	alert("ERROR!: cannot connect to camera!");
