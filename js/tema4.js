@@ -1,38 +1,25 @@
-var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
-//_______________________________________________###____________________________________________
-var constraints={audio: true,video: { facingMode: { exact: "environment" } }};
-navigator.mediaDevices.getUserMedia(constraints).then(on_cam).catch(on_error);
-var video = document.getElementById("id_video");
-video.addEventListener("touchstart",on_touch_video);
-video.addEventListener("mousedown",on_touch_video);
-var speech = new webkitSpeechRecognition();
-speech.lang="en-US";
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var button = document.getElementById("button");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
+var code = textarea.value;
+button.focus();
 
-
-function clear()
-{
-	if(speech.start())
-	{
-		clear.context("2d);
-	}//rezolvare eroare incercare multipla de pornire speech recognition
+function drawCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  eval(textarea.value);
 }
 
-//^^^^^^^^^^^^^^^^
-function on_cam(stream)
-{
-	video.srcObject=stream;
-}
-//^^^^^^^^^^^^^^^^6
-function on_error(e)
-{
-	alert("ERROR!: cannot connect to camera!");
-}
-//^^^^^^^^^^^^^^^^6
-function on_touch_video(e)
-{
-	var canvas = document.getElementById("id_img");
-	var context = canvas.getContext("2d");
-	context.drawImage(video,0,0);
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  drawCanvas();
+});
 
-}
+edit.addEventListener("click", function() {
+  textarea.focus();
+})
+
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);

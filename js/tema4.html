@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html>
-<body>
-<video width ="640" height="480"  id ="id_video" controls autoplay>Browser does not support video!</video>
-<canvas src= "" width ="640" height="480" id= "id_img"></canvas>
-<p>UI version = 2018.01.28.02</p>
-<button type="button" onclick="on_touch_video()">Poza</button>
-<button type="button" onclick="clear()">vorbeste</button>
-<p id="id_speech"></p>
-<p id="id_business_version"></p>
-<script src=tema4.js>
-</script>
-</body>
-</html> 
+<!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded -->
+
+<canvas id="canvas" width="400" height="200" class="playable-canvas">
+<input id="button" type="range" min="1" max="12">
+</canvas>
+<div class="playable-buttons">
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
+</div>
+<textarea id="code" class="playable-code">
+ctx.beginPath();
+ctx.rect(10, 10, 30, 30);
+ctx.drawFocusIfNeeded(button);</textarea>
