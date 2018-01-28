@@ -1,28 +1,7 @@
 var d = new Date();
 document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
 //_______________________________________________###____________________________________________
-var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
 
-function logBattery(battery) {
-    console.log(battery.level);
-    console.log(battery.charging);
-    console.log(dischargingTime);
-
-    battery.addEventListener('chargingchange', function() {
-        console.log('Battery chargingchange event: ' + battery.charging);
-    }, false);
-}
-
-if (navigator.getBattery) {
-    navigator.getBattery().then(logBattery);
-} else if (battery) {
-    logBattery(battery);
-}
-}
-var constraints={
-  audio: true,
-  video: true
-};
 
 var video = document.getElementById("id_video");
 
