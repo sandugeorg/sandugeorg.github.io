@@ -61,7 +61,7 @@ function mobile()
   return check;
 };
 
-function proximity()
+function proximity(){
 if('ondeviceproximity' in window) {
     // Fired when object is in the detection zone
     window.addEventListener('deviceproximity', function(event) {
@@ -84,4 +84,4 @@ if('ondeviceproximity' in window){
 } else {
     console.log("userproximity not supported");
 }
-
+}
