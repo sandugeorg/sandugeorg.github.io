@@ -8,17 +8,17 @@ video.addEventListener("touchstart",on_touch_video);
 video.addEventListener("mousedown",on_touch_video);
 
 
-//------------------------------
+//^^^^^^^^^^^^^^^^
 function on_cam(stream)
 {
 	video.srcObject=stream;
 }
-//-----------------------------
+//^^^^^^^^^^^^^^^^6
 function on_error(e)
 {
 	alert("ERROR!: cannot connect to camera!");
 }
-//-----------------------------
+//^^^^^^^^^^^^^^^^6
 function on_touch_video(e)
 {
 	var canvas = document.getElementById("id_img");
