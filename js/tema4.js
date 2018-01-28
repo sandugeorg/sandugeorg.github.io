@@ -4,7 +4,7 @@ document.getElementById("id_business_version").innerHTML = "Business version = "
 
 
 var constraints={audio: true,video: { facingMode: { exact: "environment" } }};
-navigator.mediaDevices.getUserMedia(constraints).then(on_cam).catch(on_error);
+navigator.mediaDevices.getUserMedia(constraints).then(Start).catch(on_error);
 var video = document.getElementById("id_video");
 video.addEventListener("touchstart",on_touch_video);
 video.addEventListener("mousedown",on_touch_video);
@@ -14,9 +14,7 @@ video.addEventListener("mousedown",on_touch_video);
 //^^^^^^^^^^^^^^^^
 function on_cam(stream)
 {
-	
-function start_cam(e) {
-video.srcObject=stream;}
+video.srcObject=stream;
 }
 //^^^^^^^^^^^^^^^^6
 function on_error(e)
