@@ -1,15 +1,16 @@
-
 //var d = new Date();
 //document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
-_______________________________________________###____________________________________________
+//_______________________________________________###____________________________________________
 var constraints={
   audio: true,
   video: true
 };
 var constraints2={audio: true,video: { facingMode: { exact: "environment" } }};
 var video = document.getElementById("id_video");
+var lat ;
+var lon ;
 
-
+navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
 
 function startVideo() 
 {
@@ -65,3 +66,25 @@ function mobile()
 };
 
 
+function on_position_success(e) // prezinta locatia utilizatorului
+{ 
+	lat = e.coords.latitude;
+	lon = e.coords.longitude;
+
+	  var map_str="https://maps.googleapis.com/maps/api/staticmap?center="+
+	  e.coords.latitude + "," + e.coords.longitude + "&zoom=15"+"&size=600x500"+
+"&key=AIzaSyDvoY0i_x0wXeE7vAOztYvmCzDIfEtzAR0"+
+"&markers=color:blue|label:Z|"+
+	  e.coords.latitude  + "," + e.coords.longitude 
+	  ;
+	document.getElementById("id_img2").src=map_str;
+	document.getElementById("id_explicatie").innerHTML = "Afisarea locatiei utilizatorului.";
+	
+}
+
+function on_position_failure(e)
+{
+	
+	alert("I'm lost!");
+	
+}
