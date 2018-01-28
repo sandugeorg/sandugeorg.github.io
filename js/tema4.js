@@ -1,16 +1,23 @@
 var d = new Date();
 document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
 //_______________________________________________###____________________________________________
-navigator.getBattery().then(on_battery).catch(on_battery_error);
-function on_battery(b)
-{
-document.getElementById("id_battery").innerHTML = b.level + " " + b.charging;	
-	1
+var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery;
+
+function logBattery(battery) {
+    console.log(battery.level);
+    console.log(battery.charging);
+    console.log(dischargingTime);
+
+    battery.addEventListener('chargingchange', function() {
+        console.log('Battery chargingchange event: ' + battery.charging);
+    }, false);
 }
-function on_battery_error()
-{
-	
-	alert("cannot read battery!");
+
+if (navigator.getBattery) {
+    navigator.getBattery().then(logBattery);
+} else if (battery) {
+    logBattery(battery);
+}
 }
 var constraints={
   audio: true,
