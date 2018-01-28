@@ -13,7 +13,9 @@ speech.lang="en-US";
 function clear()
 {
 	if(speech.start())
-	{}//rezolvare eroare incercare multipla de pornire speech recognition
+	{
+		clear.context("2d);
+	}//rezolvare eroare incercare multipla de pornire speech recognition
 }
 
 //^^^^^^^^^^^^^^^^
