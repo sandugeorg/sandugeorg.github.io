@@ -1,7 +1,8 @@
-<a href="tel:0747848747">
-    Call number!
-</a>
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success);
+}
 
-<a href="sms:0747848747?body=Hello%20there!">
-    Compose SMS!
-</a>
+function success(position) {
+    console.log('Latitude: ' + position.coords.latitude);
+    console.log('Longitude: ' + position.coords.longitude);
+}
