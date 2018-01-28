@@ -8,10 +8,8 @@ var constraints={
 };
 var constraints2={audio: true,video: { facingMode: { exact: "environment" } }};
 var video = document.getElementById("id_video");
-var lat ;
-var lon ;
 
-navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
+
 
 function startVideo() 
 {
