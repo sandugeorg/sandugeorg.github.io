@@ -64,8 +64,7 @@ function  check (){
 var ua = navigator.userAgent.toLowerCase();
 var isAndroid = ua.indexOf("android") > -1;
 if(isAndroid) {
-  // Do something!
-  // Redirect to Android-site?
-  window.location = 'http://android.davidwalsh.name';
+ 
+  window.location = 'https://www.android.com/';
 }
 }
