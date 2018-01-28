@@ -1,36 +1,14 @@
-
-<!DOCTYPE html><html>
-<head>
-<title>Login Page</title>
-</head>
+<!DOCTYPE html>
+<html>
 <body>
-<p>UI version = 2018.01.28.2</p>
-
-
-<form name="loginForm" method="post" action="login.php">
-<table width="20%" bgcolor="0099CC" align="center">
-
-<tr>
-<td colspan=2><center><font size=4><b>Examen</b></font></center></td>
-</tr>
-
-<tr>
-<td>Username:</td>
-<td><input type="text" size=25 name="userid"></td>
-</tr>
-
-<tr>
-<td>Password:</td>
-<td><input type="Password" size=25 name="pwd"></td>
-</tr>
-
-<tr>
-<td ><input type="Reset"></td>
-<td><input type="submit" onclick="return check(this.form)" value="Login"></td>
-</tr>
+<video width ="640" height="480"  id ="id_video" controls autoplay>Browser does not support video!</video>
+<canvas src= "" width ="640" height="480" id= "id_img"></canvas>
+<p>UI version = 2018.01.28.01</p>
+<button type="button" onclick="on_touch_video()">Poza</button>
+<button type="button" onclick="clear()">vorbeste</button>
+<p id="id_speech"></p>
+<p id="id_business_version"></p>
 <script src=tema4.js>
-</table>
-</form>
-
+</script>
 </body>
-</html>
+</html> 

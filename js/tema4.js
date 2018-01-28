@@ -1,20 +1,36 @@
 var d = new Date();
-document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".12"; 
-navigator.geolocation.getCurrentPosition(on_position_success,on_position_failure);
+document.getElementById("id_business_version").innerHTML = "Business version = " + d.getFullYear() + "." + (d.getMonth()+1) + "." + d.getDate() + ".3"; 
+//_______________________________________________###____________________________________________
+var constraints={audio: true,video: { facingMode: { exact: "environment" } }};
+navigator.mediaDevices.getUserMedia(constraints).then(on_cam).catch(on_error);
+var video = document.getElementById("id_video");
+video.addEventListener("touchstart",on_touch_video);
+video.addEventListener("mousedown",on_touch_video);
+var speech = new webkitSpeechRecognition();
+speech.lang="en-US";
 
 
-<script language="javascript">
-function check(form)
+function clear()
 {
+	if(speech.start())
+	{}//rezolvare eroare incercare multipla de pornire speech recognition
+}
 
-if(form.userid.value == "Sandu" && form.pwd.value == "tema4")
+//^^^^^^^^^^^^^^^^
+function on_cam(stream)
 {
-	return true;
+	video.srcObject=stream;
 }
-else
+//^^^^^^^^^^^^^^^^6
+function on_error(e)
 {
-	alert("Error Password or Username")
-	return false;
+	alert("ERROR!: cannot connect to camera!");
 }
+//^^^^^^^^^^^^^^^^6
+function on_touch_video(e)
+{
+	var canvas = document.getElementById("id_img");
+	var context = canvas.getContext("2d");
+	context.drawImage(video,0,0);
+
 }
-</script>
